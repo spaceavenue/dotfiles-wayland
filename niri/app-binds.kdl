@@ -1,14 +1,14 @@
 binds {
     Mod+Space { spawn "fuzzel"; } // App launcher
-
-    Mod+T       { spawn "footclient"; }           // Terminal
-    Mod+N       { spawn "nautilus"; }            // File manager
-    Mod+Shift+N { spawn "footclient" "yazi"; }  // Terminal file manager
-    Mod+K       { spawn "keepassxc"; }         // Password manager
-    Mod+B       { spawn "firefox-nightly"; }  // Firefox
-    Mod+D       { spawn "vesktop"; }         // Discord
-    Mod+S       { spawn "signal-desktop"; } // Signal
-    Mod+Shift+L { spawn "swaylock"; }      // Screen lock
+    Mod+W       { spawn "pkill" "-USR1" "waybar"; } // Waybar
+    Mod+T       { spawn "footclient"; }            // Terminal
+    Mod+N       { spawn "nautilus"; }             // File manager
+    Mod+Shift+N { spawn "footclient" "yazi"; }   // Terminal file manager
+    Mod+K       { spawn "keepassxc"; }          // Password manager
+    Mod+B       { spawn "firefox-nightly"; }   // Firefox
+    Mod+D       { spawn "vesktop"; }          // Discord
+    Mod+S       { spawn "signal-desktop"; }  // Signal
+    Mod+Shift+L { spawn "swaylock"; }       // Screen lock
 
     Mod+Apostrophe			{ spawn "~/.local/bin/clip-history";     }	 // Clipboard history
 	Mod+Alt+Apostrophe		{ spawn "~/.local/bin/clip-history" "-w";}  // Clipboard history (wtype)

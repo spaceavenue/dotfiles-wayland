@@ -27,15 +27,15 @@ git = "https://github.com/spaceavenue/niri.git"
 branch = "custom"
 use_commit = true
 
-[rustbg]
+[rusty-wl-utils]
 source = "git"
-git = "https://codeberg.org/spaceavenue/rustbg.git"
+git = "https://github.com/spaceavenue/rusty-wl-utils.git"
 branch = "dump-bgra"
 use_commit = true
 
-[rustemp]
+[udiskrs]
 source = "git"
-git = "https://codeberg.org/spaceavenue/rustemp.git"
+git = "https://github.com/spaceavenue/udiskrs.git"
 use_commit = true
 
 [wtype-custom]
