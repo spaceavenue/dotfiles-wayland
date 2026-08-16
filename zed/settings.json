@@ -7,6 +7,8 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "vim_mode": false,
+  "tab_size": 2,
   "edit_predictions": {
     "allow_data_collection": "no"
   },
@@ -86,7 +88,7 @@
   "session": {
     "trust_all_worktrees": true,
   },
-  "base_keymap": "VSCode",
+  "base_keymap": "Zed",
   "buffer_font_family": "Iosevka SS06",
   "ui_font_size": 16.0,
   "buffer_font_size": 14.0,
