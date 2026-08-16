@@ -25,9 +25,6 @@ function fish_prompt
   set_color normal ffabab --bold
   echo -n ' '
 
-  # set_color normal cba6f7
-  # echo -n ' from '
-
   set_color normal ffd1db --bold
   echo -n $USER
 
@@ -36,12 +33,6 @@ function fish_prompt
   
   set_color normal f38ba8 --bold
   echo -n (prompt_hostname)
-  #
-  # set_color normal cba6f7
-  # echo -n ' at '
-  #
-  # set_color normal f5c2e7
-  # echo -n (date "+%H:%M")
 
   set_color normal cba6f7
   echo -n ' in '
@@ -63,7 +54,6 @@ function fish_prompt
 
   echo
   echo -n '󱞩  '
-  set_color normal
 end
 funcsave fish_prompt
 
@@ -84,7 +74,7 @@ function fish_right_prompt
   echo -n ' took '
   
   set_color normal f5c2e7
-  echo -n $CMD_DURATION'ms'
+  echo -n (math $CMD_DURATION / 1000)'s'
 
   set_color normal cba6f7
   echo -n ' with '

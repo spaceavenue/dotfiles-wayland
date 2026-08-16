@@ -54,3 +54,5 @@ abbr -a ctl   'systemctl'
 abbr -a jctl  'journalctl'
 abbr -a uctl  'systemctl --user'
 abbr -a ujctl 'journalctl --user'
+
+abbr -a slock 'swaylock && sleep 0.1 && systemctl suspend' 

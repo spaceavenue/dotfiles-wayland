@@ -1,56 +1,63 @@
 binds {
-    Mod+Space { spawn "fuzzel"; } // App launcher
-    Mod+W       { spawn "pkill" "-USR1" "waybar"; } // Waybar
-    Mod+T       { spawn "footclient"; }            // Terminal
-    Mod+N       { spawn "nautilus"; }             // File manager
-    Mod+Shift+N { spawn "footclient" "yazi"; }   // Terminal file manager
-    Mod+K       { spawn "keepassxc"; }          // Password manager
-    Mod+B       { spawn "firefox-nightly"; }   // Firefox
-    Mod+D       { spawn "vesktop"; }          // Discord
-    Mod+S       { spawn "signal-desktop"; }  // Signal
-    Mod+Shift+L { spawn "swaylock"; }       // Screen lock
+  // Programs
+  Mod+Space { spawn "fuzzel"; }
+  Mod+W       { spawn "pkill" "-USR1" "waybar"; }
+  Mod+T       { spawn "footclient"; }
+  Mod+N       { spawn "nautilus"; }
+  Mod+Shift+N { spawn "footclient" "yazi"; }
+  Mod+K       { spawn "keepassxc"; }
+  Mod+B       { spawn "firefox-nightly"; }
+  Mod+D       { spawn "vesktop"; }
+  Mod+S       { spawn "signal-desktop"; }
+  Mod+Shift+L { spawn "swaylock"; }
+  
+  // Scripts
 
-    Mod+Apostrophe			{ spawn "~/.local/bin/clip-history";     }	 // Clipboard history
-	Mod+Alt+Apostrophe		{ spawn "~/.local/bin/clip-history" "-w";}  // Clipboard history (wtype)
-	
-	Mod+Shift+Apostrophe	{ spawn "~/.local/bin/color-picker";     } // Color picker
-    
-	Mod+Semicolon			{ spawn "~/.local/bin/emoji-picker";     }  // Emoji picker
-    Mod+Alt+Semicolon		{ spawn "~/.local/bin/emoji-picker" "-w";} // Emoji picker (wtype)
-    
-	Mod+Shift+Semicolon		{ spawn "~/.local/bin/glyph-picker";     }  // Nerd font glyph picker
-    Mod+Alt+Shift+Semicolon { spawn "~/.local/bin/glyph-picker" "-w";} // Nerd font glyph picker (wtype)
+  // Clipboard history
+  Mod+Apostrophe		 { spawn "~/.local/bin/clip-history.fish"; }
+  Mod+Alt+Apostrophe { spawn "~/.local/bin/clip-history.fish" "--wtype";}
+  
+  // Color picker
+  Mod+Shift+Apostrophe	{ spawn "~/.local/bin/color-picker.fish"; }
+  
+  // Emoji picker
+  Mod+Semicolon     { spawn "~/.local/bin/emoji-picker.fish"; }
+  Mod+Alt+Semicolon	{ spawn "~/.local/bin/emoji-picker.fish" "--wtype";}
+  
+  // Nerd font glyph picker
+  Mod+Shift+Semicolon	  	{ spawn "~/.local/bin/glyph-picker.fish"; }
+  Mod+Alt+Shift+Semicolon { spawn "~/.local/bin/glyph-picker.fish" "--wtype";}
+  
+  Mod+F4  { spawn "power-menu.fish";	}	 // Power menu
+  Mod+F5  { spawn "wall-picker.fish"; } // Wallpaper selector
+  Mod+F12 { spawn-sh "pkill -f 'foot' && foot --server"; }      // (Re)start foot server
 
-    Mod+F4  { spawn "~/.local/bin/power-menu";	}	// Power menu
-    Mod+F5  { spawn "~/.local/bin/wall-picker"; }  // Wallpaper selector
-    Mod+F12 { spawn "~/.local/bin/foot-server"; } // (Re)start foot server
+  Mod+O repeat=false { toggle-overview; } // Open/close the Overview
+  Mod+Q repeat=false { close-window; }    // Close window
 
-    Mod+O repeat=false { toggle-overview; } // Open/close the Overview
-    Mod+Q repeat=false { close-window; }   // Close window
+  // Screenshot
+  Mod+Shift+S { spawn-sh "niri msg screenshot-stdout interactive | satty -f -"; }
+  Print       { spawn-sh "niri msg screenshot-stdout screen | satty -f -"; }
+  Mod+Print   { spawn-sh "niri msg screenshot-stdout window | satty -f -"; }
 
-    // Screenshot
-    Mod+Shift+S { spawn-sh "niri msg screenshot-stdout interactive | satty -f -"; }
-    Print       { spawn-sh "niri msg screenshot-stdout screen | satty -f -"; }
-    Mod+Print   { spawn-sh "niri msg screenshot-stdout window | satty -f -"; }
+  // Quit
+  Mod+Shift+E     { quit; }
+  Ctrl+Alt+Delete { quit; }
 
-    // Quit
-    Mod+Shift+E     { quit; }
-    Ctrl+Alt+Delete { quit; }
+  // Volume keys mappings
+  XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
+  XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
+  XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
+  XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
 
-    // Volume keys mappings
-    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
-    XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
-    XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+  // Media keys mapping
+  XF86AudioPlay  allow-when-locked=true { spawn "playerctl" "play-pause"; }
+  XF86AudioPause allow-when-locked=true { spawn "playerctl" "play-pause"; }
+  XF86AudioStop  allow-when-locked=true { spawn "playerctl" "stop"; }
+  XF86AudioPrev  allow-when-locked=true { spawn "playerctl" "previous"; }
+  XF86AudioNext  allow-when-locked=true { spawn "playerctl" "next"; }
 
-    // Media keys mapping
-    XF86AudioPlay  allow-when-locked=true { spawn "playerctl" "play-pause"; }
-    XF86AudioPause allow-when-locked=true { spawn "playerctl" "play-pause"; }
-    XF86AudioStop  allow-when-locked=true { spawn "playerctl" "stop"; }
-    XF86AudioPrev  allow-when-locked=true { spawn "playerctl" "previous"; }
-    XF86AudioNext  allow-when-locked=true { spawn "playerctl" "next"; }
-
-    // Brightness key mappings
-    XF86MonBrightnessUp   allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+5%"; }
-    XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "5%-"; }
+  // Brightness key mappings
+  XF86MonBrightnessUp   allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+5%"; }
+  XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "5%-"; }
 }

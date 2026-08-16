@@ -28,10 +28,10 @@ function bead --wraps "bat"
 end
 funcsave bead
 
-function bead --wraps "bat"
+function bail --wraps "bat"
 	bat --line-range -$argv[1]: $argv[2..]
 end
-funcsave bead
+funcsave bail
 
 function funcdestroy --wraps "functions -e" --description "destroy a function"
 	functions -e $argv
