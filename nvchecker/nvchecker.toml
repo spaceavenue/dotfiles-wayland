@@ -30,7 +30,11 @@ use_commit = true
 [rusty-wl-utils]
 source = "git"
 git = "https://github.com/spaceavenue/rusty-wl-utils.git"
-branch = "dump-bgra"
+use_commit = true
+
+[qoz]
+source = "git"
+git = "https://github.com/spaceavenue/qoz.git"
 use_commit = true
 
 [udiskrs]
@@ -38,18 +42,23 @@ source = "git"
 git = "https://github.com/spaceavenue/udiskrs.git"
 use_commit = true
 
-[wtype-custom]
-source = "git"
-git = "https://github.com/atx/wtype.git"
-use_commit = true
+# github projects (forked/patched when building)
 
-# github projects
+[wtype-custom]
+source = "github"
+github = "atx/wtype"
+prefix = "v"
+
+[imv-custom]
+source = "git"
+git = "https://git.sr.ht/~exec64/imv"
+prefix = "v"
 
 [swaylock-time]
 source = "github"
 github = "swaywm/swaylock"
-prefix = "v"
 use_max_tag = true
+prefix = "v"
 
 [ttc-iosevka-collection]
 source = "github"
