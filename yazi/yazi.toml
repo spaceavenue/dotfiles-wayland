@@ -91,7 +91,8 @@ prepend_preloaders = [
 ]
 
 prepend_previewers = [
-    { url = "*.qoz", run = "qoz" }
+    { url = "*.qoz", run = "qoz" },
+    { mime = "application/{*zip,tar,bzip2,7z*,rar,xz,zstd,java-archive}", run = "ouch" }
 ]
 fetchers = [
 	# MIME-type
