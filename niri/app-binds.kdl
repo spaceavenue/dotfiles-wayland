@@ -1,6 +1,6 @@
 binds {
   // Programs
-  Mod+Space { spawn "fuzzel"; }
+  Mod+Space   { spawn "fuzzel"; }
   Mod+W       { spawn "pkill" "-USR1" "waybar"; }
   Mod+T       { spawn "footclient"; }
   Mod+N       { spawn "nautilus"; }
@@ -14,23 +14,25 @@ binds {
   // Scripts
 
   // Clipboard history
-  Mod+Apostrophe		 { spawn "~/.local/bin/clip-history.fish"; }
-  Mod+Alt+Apostrophe { spawn "~/.local/bin/clip-history.fish" "--wtype";}
+  Mod+Apostrophe		 { spawn "clip-history.fish"; }
+  Mod+Alt+Apostrophe { spawn "clip-history.fish" "--wtype";}
+  Mod+Ctrl+Alt+Apostrophe { spawn "clip-history.fish" "--wtype" "--nline"; }
   
   // Color picker
-  Mod+Shift+Apostrophe	{ spawn "~/.local/bin/color-picker.fish"; }
-  
+  Mod+Shift+Apostrophe	   { spawn "color-picker.fish"; }
+  Mod+Alt+Shift+Apostrophe { spawn "color-picker.fish" "--wtype"; }
+
   // Emoji picker
-  Mod+Semicolon     { spawn "~/.local/bin/emoji-picker.fish"; }
-  Mod+Alt+Semicolon	{ spawn "~/.local/bin/emoji-picker.fish" "--wtype";}
+  Mod+Semicolon     { spawn "emoji-picker.fish"; }
+  Mod+Alt+Semicolon	{ spawn "emoji-picker.fish" "--wtype";}
   
   // Nerd font glyph picker
-  Mod+Shift+Semicolon	  	{ spawn "~/.local/bin/glyph-picker.fish"; }
-  Mod+Alt+Shift+Semicolon { spawn "~/.local/bin/glyph-picker.fish" "--wtype";}
+  Mod+Shift+Semicolon	  	{ spawn "glyph-picker.fish"; }
+  Mod+Alt+Shift+Semicolon { spawn "glyph-picker.fish" "--wtype";}
   
-  Mod+F4  { spawn "power-menu.fish";	}	 // Power menu
-  Mod+F5  { spawn "wall-picker.fish"; } // Wallpaper selector
-  Mod+F12 { spawn-sh "pkill -f 'foot' && foot --server"; }      // (Re)start foot server
+  Mod+F4  { spawn "power-menu.fish";	}	        // Power menu
+  Mod+F5  { spawn "wall-picker.fish"; }         // Wallpaper selector
+  Mod+F6  { spawn "pkill" "-USR1" "rustidle"; } // Toggle idle management
 
   Mod+O repeat=false { toggle-overview; } // Open/close the Overview
   Mod+Q repeat=false { close-window; }    // Close window
@@ -58,6 +60,6 @@ binds {
   XF86AudioNext  allow-when-locked=true { spawn "playerctl" "next"; }
 
   // Brightness key mappings
-  XF86MonBrightnessUp   allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+5%"; }
-  XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "5%-"; }
+  XF86MonBrightnessUp   allow-when-locked=true { spawn "blctl.fish" "u" "5"; }
+  XF86MonBrightnessDown allow-when-locked=true { spawn "blctl.fish" "d" "5"; }
 }

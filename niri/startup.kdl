@@ -1,6 +1,6 @@
 // Startup processes
 
-spawn-at-startup "rustbg" " -f" "/home/sanya/.config/current_wallpaper"
+spawn-at-startup "rustbg" "-f" "/home/sanya/.config/current_wallpaper"
 spawn-at-startup "rustbg" "-f" "-n" "wallpaper-overview" "/home/sanya/.config/current_wallpaper_blurred"
 
 spawn-at-startup "rustemp" "4500.0"
