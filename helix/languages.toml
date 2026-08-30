@@ -1,0 +1,75 @@
+# Languages & LSP Configuration
+
+[language-server.clangd]
+command = "clangd"
+args = ["--background-index", "--clang-tidy", "--header-insertion=iwyu"]
+
+[language-server.vscode-css-language-server]
+command = "vscode-css-language-server"
+args = ["--stdio"]
+config = { provideFormatter = true, css = { validate = true }, scss = { validate = true }, less = { validate = true } }
+
+[language-server.vscode-html-language-server]
+command = "vscode-html-language-server"
+args = ["--stdio"]
+config = { provideFormatter = true, embeddedLanguages = { css = true, javascript = true }, configurationSection = ["html", "css", "javascript"] }
+
+[language-server.rust-analyzer]
+command = "rust-analyzer"
+config = { checkOnSave = true, cargo = { allFeatures = true }, inlayHints = { bindingModeHints = { enable = false }, chainingHints = { enable = true }, typeHints = { enable = true } } }
+
+[[language]]
+name = "rust"
+auto-format = true
+indent = { tab-width = 2, unit = "  " }
+
+[language.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'`' = '`'
+'<' = '>'
+
+[[language]]
+name = "c"
+auto-format = true
+indent = { tab-width = 2, unit = "  " }
+
+[[language]]
+name = "cpp"
+auto-format = true
+indent = { tab-width = 2, unit = "  " }
+
+[[language]]
+name = "python"
+auto-format = false
+indent = { tab-width = 2, unit = "  " }
+
+[[language]]
+name = "lua"
+auto-format = false
+indent = { tab-width = 2, unit = "  " }
+
+[[language]]
+name = "html"
+auto-format = false
+indent = { tab-width = 2, unit = "  " }
+
+[[language]]
+name = "css"
+auto-format = false
+indent = { tab-width = 2, unit = "  " }
+
+[[language]]
+name = "scss"
+auto-format = false
+indent = { tab-width = 2, unit = "  " }
+
+[[language]]
+name = "json"
+indent = { tab-width = 2, unit = "  " }
+
+[[language]]
+name = "toml"
+indent = { tab-width = 2, unit = "  " }

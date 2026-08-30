@@ -1,0 +1,83 @@
+# Helix Editor Configuration
+
+theme = "catppuccin_mocha_custom"
+
+[editor]
+cursorline = true
+bufferline = "always"
+color-modes = true
+true-color = true
+clipboard-provider = "wayland"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+git-ignore = false
+
+[editor.statusline]
+left = ["mode", "spacer", "version-control", "file-name", "read-only-indicator", "file-modification-indicator"]
+right = ["diagnostics", "selections", "position", "total-line-numbers", "file-encoding", "file-type"]
+
+[editor.lsp]
+display-inlay-hints = true
+
+[editor.gutters]
+layout = ["diagnostics", "line-numbers", "diff", "spacer"]
+
+[editor.gutters.line-numbers]
+min-width = 2
+
+[editor.indent-guides]
+render = true
+
+[editor.soft-wrap]
+enable = true
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+other-lines = "warning"
+
+[keys.normal]
+# Custom Navigation & Window movement
+C-u = "undo"                     # keymap("n", "<C-u>", ":u<CR>")
+C-left = "jump_view_left"        # keymap("n", "<C-Left>", "<C-w>h")
+C-right = "jump_view_right"      # keymap("n", "<C-Right>", "<C-w>l")
+C-down = "jump_view_down"        # keymap("n", "<C-Down>", "<C-w>j")
+C-up = "jump_view_up"            # keymap("n", "<C-Up>", "<C-w>k")
+
+# Shift+hjkl window navigation
+"H" = "jump_view_left"
+"J" = "jump_view_down"
+"L" = "jump_view_right"
+
+# Explorer / File Picker toggle
+C-n = "file_picker"
+
+# Buffer Navigation
+A-h = "goto_previous_buffer"
+A-l = "goto_next_buffer"
+
+# LSP Keymap Aliases
+"g"."R" = "goto_reference"
+"g"."D" = "goto_declaration"
+"g"."d" = "goto_definition"
+"g"."i" = "goto_implementation"
+"g"."y" = "goto_type_definition"
+
+# Leader aliases
+"space"."c"."a" = "code_action"         # <leader>ca -> Code Action
+"space"."r"."n" = "rename_symbol"       # <leader>rn -> Rename symbol
+"space"."r"."s" = ":lsp-restart"        # <leader>rs -> Restart LSP
+"space"."D" = "diagnostics_picker"      # <leader>D -> Buffer / Project diagnostics
+"space"."d" = "hover"                   # <leader>d -> Line diagnostics / hover
+
+[keys.insert]
+C-backspace = "delete_word_backward"    # <C-BS> / <C-H>
+C-del = "delete_word_forward"           # <C-Delete>
+
+[keys.select]
+"<" = "unindent"
+">" = "indent"

@@ -1,0 +1,10 @@
+inherits = "catppuccin_mocha"
+
+# Transparent background matching `transparent_background = true` in Neovim
+"ui.background" = {}
+
+# Custom palette overrides matching user's catppuccin setup
+[palette]
+base = "#000000"
+mantle = "#18000f"
+crust = "#18000f"
