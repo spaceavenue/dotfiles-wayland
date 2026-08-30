@@ -2,58 +2,57 @@
 # overall = { bg = "" }
 
 [mgr]
-cwd = { fg = "#94e2d5" }
+cwd = { fg = "#ffd1db" }
 
-find_keyword  = { fg = "#f9e2af", italic = true }
+find_keyword  = { fg = "#fab387", italic = true }
 find_position = { fg = "#f5c2e7", bg = "reset", italic = true }
 
 marker_copied   = { fg = "#a6e3a1", bg = "#a6e3a1" }
 marker_cut      = { fg = "#f38ba8", bg = "#f38ba8" }
-marker_marked   = { fg = "#94e2d5", bg = "#94e2d5" }
+marker_marked   = { fg = "#cba6f7", bg = "#cba6f7" }
 marker_selected = { fg = "#f5c2e7", bg = "#f5c2e7" }
 
-count_copied   = { fg = "#1e1e2e", bg = "#a6e3a1" }
-count_cut      = { fg = "#1e1e2e", bg = "#f38ba8" }
-count_selected = { fg = "#1e1e2e", bg = "#f5c2e7" }
+count_copied   = { fg = "#18000f", bg = "#a6e3a1" }
+count_cut      = { fg = "#18000f", bg = "#f38ba8" }
+count_selected = { fg = "#18000f", bg = "#f5c2e7" }
 
 border_symbol = "│"
 border_style  = { fg = "#ffd1db" }
 
-syntect_theme = "~/.config/bat/themes/main.tmTheme"
+syntect_theme = "~/.config/bat/themes/Theme.tmTheme"
 
 [tabs]
-active   = { fg = "#1e1e2e", bg = "#cdd6f4", bold = true }
-inactive = { fg = "#cdd6f4", bg = "#45475a" }
+active   = { fg = "#18000f", bg = "#ffd1db", bold = true }
+inactive = { fg = "#cc99aa", bg = "#1d0213" }
 
 [mode]
-normal_main = { fg = "#1e1e2e", bg = "#f5c2e7", bold = true }
-# normal_alt  = { fg = "#f5c2e7", bg = "#313244"}
-normal_alt  = { fg = "#f38ba8", bg = "#313244"}
+normal_main = { fg = "#18000f", bg = "#ffd1db", bold = true }
+normal_alt  = { fg = "#ffd1db", bg = "#240518"}
 
-select_main = { fg = "#1e1e2e", bg = "#a6e3a1", bold = true }
-select_alt  = { fg = "#a6e3a1", bg = "#313244"}
+select_main = { fg = "#18000f", bg = "#cba6f7", bold = true }
+select_alt  = { fg = "#cba6f7", bg = "#240518"}
 
-unset_main  = { fg = "#1e1e2e", bg = "#f2cdcd", bold = true }
-unset_alt   = { fg = "#f2cdcd", bg = "#313244"}
+unset_main  = { fg = "#18000f", bg = "#f38ba8", bold = true }
+unset_alt   = { fg = "#f38ba8", bg = "#240518"}
 
 [indicator]
 parent = { fg = "#ffd1db", bg = "#720043" }
-current = { fg = "#720043", bg = "#ffd1db" }
+current = { fg = "#18000f", bg = "#ffd1db" }
 preview = { fg = "#ffd1db", bg = "#720043" }
 
 [status]
 sep_left  = { open = "", close = "" }
 sep_right = { open = "", close = "" }
 
-progress_label  = { fg = "#ffffff", bold = true }
-progress_normal = { fg = "#a6e3a1", bg = "#45475a" }
-progress_error  = { fg = "#f9e2af", bg = "#f38ba8" }
+progress_label  = { fg = "#ffd1db", bold = true }
+progress_normal = { fg = "#a6e3a1", bg = "#240518" }
+progress_error  = { fg = "#18000f", bg = "#f38ba8" }
 
 perm_type  = { fg = "#89b4fa" }
-perm_read  = { fg = "#f9e2af" }
+perm_read  = { fg = "#cba6f7" }
 perm_write = { fg = "#f38ba8" }
-perm_exec  = { fg = "#a6e3a1" }
-perm_sep   = { fg = "#7f849c" }
+perm_exec  = { fg = "#89b4fa" }
+perm_sep   = { fg = "#6e6a86" }
 
 [input]
 border   = { fg = "#f5c2e7" }
@@ -83,51 +82,51 @@ title   = {}
 hovered = { fg = "#f5c2e7", bold = true }
 
 [which]
-mask            = { bg = "#313244" }
-cand            = { fg = "#94e2d5" }
-rest            = { fg = "#9399b2" }
-desc            = { fg = "#f5c2e7" }
+mask            = { bg = "#18000f" }
+cand            = { fg = "#89b4fa" }
+rest            = { fg = "#cc99aa" }
+desc            = { fg = "#ffd1db" }
 separator       = "  "
-separator_style = { fg = "#585b70" }
+separator_style = { fg = "#6e6a86" }
 
 [help]
-on      = { fg = "#94e2d5" }
+on      = { fg = "#89b4fa" }
 run     = { fg = "#f5c2e7" }
-desc    = { fg = "#9399b2" }
-hovered = { bg = "#585b70", bold = true }
-footer  = { fg = "#cdd6f4", bg = "#45475a" }
+desc    = { fg = "#cc99aa" }
+hovered = { bg = "#720043", bold = true }
+footer  = { fg = "#ffd1db", bg = "#1d0213" }
 
 [notify]
-title_info  = { fg = "#94e2d5" }
-title_warn  = { fg = "#f9e2af" }
+title_info  = { fg = "#89b4fa" }
+title_warn  = { fg = "#fab387" }
 title_error = { fg = "#f38ba8" }
 
 [filetype]
 rules = [
 	# Media
-	{ mime = "image/*", fg = "#94e2d5" },
-	{ mime = "{audio,video}/*", fg = "#f9e2af" },
+	{ mime = "image/*", fg = "#ffd1db" },
+	{ mime = "{audio,video}/*", fg = "#f38ba8" },
 
 	# Archives
-	{ mime = "application/*zip", fg = "#f5c2e7" },
-	{ mime = "application/x-{tar,bzip*,7z-compressed,xz,rar}", fg = "#f5c2e7" },
+	{ mime = "application/*zip", fg = "#cba6f7" },
+	{ mime = "application/x-{tar,bzip*,7z-compressed,xz,rar}", fg = "#cba6f7" },
 
 	# Documents
-	{ mime = "application/{pdf,doc,rtf}", fg = "#a6e3a1" },
+	{ mime = "application/{pdf,doc,rtf}", fg = "#89b4fa" },
 
 	# Virtual file system
-	{ mime = "vfs/{absent,stale}", fg = "#45475a" },
+	{ mime = "vfs/{absent,stale}", fg = "#6e6a86" },
 
 	# Special file
 	{ url = "*", is = "orphan", bg = "#f38ba8" },
-	{ url = "*", is = "exec"  , fg = "#a6e3a1" },
+	{ url = "*", is = "exec"  , fg = "#fab387" },
 
 	# Dummy file
 	{ url = "*", is = "dummy", bg = "#f38ba8" },
 	{ url = "*/", is = "dummy", bg = "#f38ba8" },
 
 	# Fallback
-	{ url = "*/", fg = "#f38ba8" },
+	{ url = "*/", fg = "#ffabab" },
 ]
 
 [spot]

@@ -92,46 +92,5 @@
   "buffer_font_family": "Iosevka SS06",
   "ui_font_size": 16.0,
   "buffer_font_size": 14.0,
-  "theme": "Catppuccin Mocha (pink)",
-  "theme_overrides": {
-    "Catppuccin Mocha (pink)": {
-      "editor.background": "#18000f",
-      "editor.gutter.background": "#18000f",
-      "terminal.background": "#000000",
-      "terminal.ansi.background": "#000000",
-      "status_bar.background": "#18000f",
-      "scrollbar.track.background": "#18000f",
-      "border": "#00000000",
-      "border.focused": "#00000000",
-      "border.selected": "#00000000",
-      "border.transparent": "#00000000",
-      "border.disabled": "#00000000",
-      "toolbar.background": "#18000f",
-      "title_bar.background": "#18000f",
-      "tab_bar.background": "#18000f",
-      "elevated_surface.background": "#18000f",
-      "surface.background": "#18000f",
-      "panel.background": "#18000f",
-      "panel.overlay_background": "#18000f",
-      "editor.subheader.background": "#18000f",
-      "hidden.background": "#18000f",
-      "hint.background": "#18000f",
-      "predictive.background": "#18000f",
-      "players": [
-        {
-          "cursor": "#ffd1db",
-          "selection": "#ffd1db44",
-          "background": "#f38ba8",
-        },
-      ],
-      "syntax": {
-        "comment": {
-          "font_style": "italic",
-        },
-        "comment.doc": {
-          "font_style": "italic",
-        },
-      },
-    },
-  },
+  "theme": "Main",
 }

@@ -6,7 +6,7 @@ Requisite=graphical-session.target
 
 [Service]
 Type=simple
-ExecStart=%h/.local/bin/prog/wl-watch cliphist store
+ExecStart=wl-watch cliphist store
 Restart=on-failure
 
 [Install]

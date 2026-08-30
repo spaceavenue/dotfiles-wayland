@@ -32,6 +32,11 @@ source = "git"
 git = "https://github.com/spaceavenue/rusty-wl-utils.git"
 use_commit = true
 
+[rustclip]
+source = "git"
+git = "https://github.com/spaceavenue/rustclip.git"
+use_commit = true
+
 [qoz]
 source = "git"
 git = "https://github.com/spaceavenue/qoz.git"

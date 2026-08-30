@@ -57,6 +57,18 @@ function rf --wraps "rg" --description "search and pipe output of rg into fzf"
 end
 funcsave rf
 
+function list-binds --description ''
+  bat -p $XDG_CONFIG_HOME/niri/{app,focus-movement}-binds.kdl | sed -E '
+    s://.*$::; 
+    s/^[[:blank:]]+//; 
+    s/[[:blank:]]+$//; 
+    /^binds[[:blank:]]*\{/d; 
+    /^\}/d; 
+    /^$/d;
+    '
+end
+funcsave list-binds 
+
 function ytm-album --wraps "yt-dlp"
 	yt-dlp -4 --format="ba[ext=m4a]"/ba --extract-audio --audio-format m4a --no-overwrites --embed-metadata --embed-thumbnail --ppa "ThumbnailsConvertor:-lavfi crop=ih:ih" -o "%(album)s/%(track_number,playlist_index)s %(title)s.%(ext)s" $argv
 end

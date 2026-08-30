@@ -1,14 +1,15 @@
 binds {
   // Programs
   Mod+Space   { spawn "fuzzel"; }
-  Mod+W       { spawn "pkill" "-USR1" "waybar"; }
-  Mod+T       { spawn "footclient"; }
-  Mod+N       { spawn "nautilus"; }
-  Mod+Shift+N { spawn "footclient" "yazi"; }
-  Mod+K       { spawn "keepassxc"; }
+  Mod+A       { spawn "msc-player.fish";}
   Mod+B       { spawn "firefox-nightly"; }
   Mod+D       { spawn "vesktop"; }
+  Mod+K       { spawn "keepassxc"; }
+  Mod+N       { spawn "nautilus"; }
+  Mod+W       { spawn "pkill" "-USR1" "waybar"; }
   Mod+S       { spawn "signal-desktop"; }
+  Mod+T       { spawn "footclient"; }
+  Mod+Shift+N { spawn "footclient" "yazi"; }
   Mod+Shift+L { spawn "swaylock"; }
   
   // Scripts
@@ -47,10 +48,10 @@ binds {
   Ctrl+Alt+Delete { quit; }
 
   // Volume keys mappings
-  XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
-  XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
-  XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
-  XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+  XF86AudioRaiseVolume allow-when-locked=true { spawn "volctl.fish" "u"; }
+  XF86AudioLowerVolume allow-when-locked=true { spawn "volctl.fish" "d"; }
+  XF86AudioMute        allow-when-locked=true { spawn "volctl.fish" "m"; }
+  XF86AudioMicMute     allow-when-locked=true { spawn "volctl.fish" "c"; }
 
   // Media keys mapping
   XF86AudioPlay  allow-when-locked=true { spawn "playerctl" "play-pause"; }

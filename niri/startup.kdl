@@ -3,7 +3,7 @@
 spawn-at-startup "rustbg" "-f" "/home/sanya/.config/current_wallpaper"
 spawn-at-startup "rustbg" "-f" "-n" "wallpaper-overview" "/home/sanya/.config/current_wallpaper_blurred"
 
-spawn-at-startup "rustemp" "4500.0"
+spawn-at-startup "rustemp" "-t" "4500" "-c" "0.3" "-w" "0.92" "-O" "0.02:0.02:0.02"
 spawn-sh-at-startup "rustidle ~/.config/rustidle/config"
 
 // spawn-at-startup "foot" "--server"
