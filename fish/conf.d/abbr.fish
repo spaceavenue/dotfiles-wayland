@@ -21,10 +21,10 @@ abbr -a lt  'eza --tree -L3'
 abbr -a lc  'clear; eza'
 
 # note: the -g flag displays operation progress and only exists for uutils-coreutils versions of cp, mv and rm.
-abbr -a mv  'mv -gvi'
-abbr -a cp  'cp -gavi'
-abbr -a rm  'rm -gIdr'
-abbr -a rmf 'rm -gfdr'
+abbr -a mv  'mv -vi'
+abbr -a cp  'cp -avi'
+abbr -a rm  'rm -Idr'
+abbr -a rmf 'rm -fdr'
 
 abbr -a grep 'rg'
 

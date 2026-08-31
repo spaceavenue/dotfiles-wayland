@@ -1,3 +1,4 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR __fish_initialized:4300
 SETUVAR fish_user_paths:/home/sanya/\x2elocal/lib/cargo/bin\x1e/home/sanya/\x2elocal/bin/prog\x1e/home/sanya/\x2elocal/bin

@@ -75,6 +75,8 @@ A-l = "goto_next_buffer"
 "space"."d" = "hover"                   # <leader>d -> Line diagnostics / hover
 
 [keys.insert]
+C-right = "move_next_long_word_start"
+C-left = "move_prev_long_word_start"
 C-backspace = "delete_word_backward"    # <C-BS> / <C-H>
 C-del = "delete_word_forward"           # <C-Delete>
 
